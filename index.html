@@ -1,0 +1,165 @@
+<HTML>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script type="text/javascript" src="CableRTForm.js"></script>
+		<Link rel=stylesheet href="CableRTForm.css" type="text/css"></style>
+	</head>
+	<title>Refer to OSP form</title>
+	<h2>Outside Plant Referral Form</h2>
+	<table border="0">
+	<tr>
+		<td>Town</td>
+		<td>Date</td>
+	</tr>
+	<tr>
+		<td><textarea rows="1" id="town"></textarea></td>
+		<td><p id="date"></p>
+		<script>
+		var today = new Date();
+		var dd = today.getDate();
+		var mm = today.getMonth()+1;
+		var yyyy = today.getFullYear();
+		if(dd<10) {
+			dd = '0'+dd
+		}
+		if(mm<10) {
+			mm = '0'+mm
+		}
+		today = mm + '/' + dd + '/' + yyyy;
+		document.getElementById("date").innerHTML = today;</script></td>
+	</tr>
+	<tr>
+		<td>Address</td>
+		<td>Tech #</td>
+	</tr>
+		<td><textarea rows="1" id="address"></textarea></td>
+		<td><input type="number" id="tech"/></td>
+	</tr>
+	<tr>
+		<td>Pole #</td>
+		<td>Node #</td>
+	</tr>
+		<td><input type="text" id="pole"/></td>
+		<td><input type="text" id="node"/></td>
+	</tr>
+	<tr>
+		<td>Customer Name</td>
+		<td>Contact Info</td>
+	</tr>
+	<tr>
+		<td><textarea rows="1" id="name"></textarea></td>
+		<td><textarea rows="1" id="contact"></textarea></td>
+	</tr>
+	<tr>
+		<td>Tap Value/Ports</td>
+		<td>Drop Footage</td>
+	</tr>
+	<tr>
+		<td><input type="text" id="tap"/></td>
+		<td><input type="number" id="footage"/></td>
+	</tr>
+	<tr>
+		<td>Cable Size: </td>
+		<td><select id="combo">
+			<option value="RG-6">RG-6</option>
+			<option value="RG-7">RG-7</option>
+			<option value="RG-11">RG-11</option></select>
+		</td>
+		</tr>
+	<tr>
+		<td><br><input type="radio" name="cableType" id="aerial">Aerial</input></td>
+		<td><br><input type="radio" name="cableType" id="underground">Underground</input></td>
+	</tr>
+	</table>
+	<br>
+	<table border="0">
+		<tr>
+			<td>Channel</td>
+			<td>Tap</td>
+			<td>Ground Block</td>
+			<td>Device</td>
+		</tr>
+		<tr>
+			<td><input type="number" id="chn0"/></td>
+			<td><input type="number" id="tap0"/></td>
+			<td><input type="number"/ id="gbk0"></td>
+			<td><input type="number" id="cpe0"/></td>
+		</tr>
+		<tr>
+			<td><input type="number" id="chn1"/></td>
+			<td><input type="number" id="tap1"/></td>
+			<td><input type="number"/ id="gbk1"></td>
+			<td><input type="number" id="cpe1"/></td>
+		</tr>
+		<tr>
+			<td><input type="number" id="chn2"/></td>
+			<td><input type="number" id="tap2"/></td>
+			<td><input type="number"/ id="gbk2"></td>
+			<td><input type="number" id="cpe2"/></td>
+		</tr>
+		<tr>
+			<td><input type="number" id="chn3"/></td>
+			<td><input type="number" id="tap3"/></td>
+			<td><input type="number"/ id="gbk3"></td>
+			<td><input type="number" id="cpe3"/></td>
+		</tr>
+		<tr>
+			<td><input type="number" id="chn4"/></td>
+			<td><input type="number" id="tap4"/></td>
+			<td><input type="number"/ id="gbk4"></td>
+			<td><input type="number" id="cpe4"/></td>
+		</tr>
+		<tr>
+			<td><input type="number" id="chn5"/></td>
+			<td><input type="number" id="tap5"/></td>
+			<td><input type="number"/ id="gbk5"></td>
+			<td><input type="number" id="cpe5"/></td>
+		</tr>
+		<tr>
+			<td>Downstream Frequency<br><input type="number" id="rxFreq"/></td>
+			<td><input type="number" id="tap6"/></td>
+			<td><input type="number"/ id="gbk6"></td>
+			<td><input type="number" id="cpe6"/></td>
+		</tr>
+		<tr>
+			<td>Upstream Frequency<br><input type="number" id="txFreq"/></td>
+			<td><input type="number" id="tap7"/></td>
+			<td><input type="number"/ id="gbk7"></td>
+			<td><input type="number" id="cpe7"/></td>
+		</tr>
+	</table>
+	<br>
+	Description of Problem:
+	<br>
+	<textarea id="description"></textarea>
+	<br>
+	<p id="notification"></p>
+	<button value="submit" onclick="submitTicket(); return false">Email Form</button>
+</HTML>
+
+<!--
+ID names:
+town
+date
+address
+tech
+pole
+node
+name
+contact
+tap
+footage
+combo (cable size combo box)
+aerial
+underground
+chn 0-5
+tap 0-7
+gbk 0-7
+cpe 0-7
+rxFreq
+txFreq
+spChan
+description
+splitConfig
+-->

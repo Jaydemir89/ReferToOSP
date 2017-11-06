@@ -1,0 +1,71 @@
+html{
+	text-align: center;
+	font-family: helvetica;
+	font-size: 20;
+}
+input{
+	width: 60px;
+	height: 30px;
+	border-color: transparent;
+	border-bottom-color: black;
+	font-size: 16;
+}
+textarea{
+	border-color: transparent;
+	border-bottom-color: black;
+	font-size: 16;
+	width: 160;
+	height: 30;
+}
+select{
+	width: 80px;
+	height: 30px;
+	font-size: 16;
+	border-color: transparent;
+	background-color: white;
+}
+
+#aerial{
+	width: 30px;
+	height: 20px;
+}
+#underground{
+	width: 30px;
+	height: 20px;
+}
+
+#description{
+	border-color: black;
+	font-size: 16;
+	width: 340;
+	height: 100;
+}
+#splitConfig{
+	border-color: black;
+	font-size: 16;
+	width: 340;
+	height: 100;
+}
+
+#notification{
+	color: red;
+}
+
+td{
+	height: 36px;
+	width: 90px;
+}
+
+table{
+   width: auto;
+   margin-left: auto;
+   margin-right: auto;
+   font-size: 20;
+   text-align: center;
+}
+
+button{
+	width: 180px;
+	height: 60px;
+	font-size: 20;
+}
